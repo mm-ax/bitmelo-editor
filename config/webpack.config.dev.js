@@ -9,6 +9,7 @@ module.exports = merge( common, {
   devServer: {
     contentBase: './dist',
     port: 9001,
+    hot: true
   },
   plugins: [
     new webpack.DefinePlugin( {
