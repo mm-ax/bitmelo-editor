@@ -52,7 +52,11 @@ class ReleaseEditor extends React.Component {
 }
 
 ReleaseEditor.propTypes = {
-  soundData: PropTypes.shape( { volumeTics: PropTypes.arrayOf( PropTypes.number ) } ).isRequired,
+  soundData: PropTypes.shape( {
+    volumeTics: PropTypes.arrayOf( PropTypes.number ),
+    releaseLength: PropTypes.number.isRequired,
+    releaseMode: PropTypes.number.isRequired,
+  } ).isRequired,
   activeSound: PropTypes.number.isRequired,
   _setSoundData: PropTypes.func.isRequired,
 };

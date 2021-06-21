@@ -21,7 +21,7 @@ class WavePicker extends React.Component {
     const { soundData } = this.props;
     const waveTypeItems = [
       { value: '0', display: 'Sine' },
-      { value: '1', display: 'Triangle' },
+      { value: '1', Buttondisplay: 'Triangle' },
       { value: '2', display: 'Square' },
       { value: '3', display: 'Sawtooth' },
     ];
@@ -40,7 +40,10 @@ class WavePicker extends React.Component {
 }
 
 WavePicker.propTypes = {
-  soundData: PropTypes.shape( { volumeTics: PropTypes.arrayOf( PropTypes.number ) } ).isRequired,
+  soundData: PropTypes.shape( {
+    volumeTics: PropTypes.arrayOf( PropTypes.number ),
+    wave: PropTypes.object.isRequired,
+  } ).isRequired,
   activeSound: PropTypes.number.isRequired,
   setSound: PropTypes.func.isRequired,
 };
