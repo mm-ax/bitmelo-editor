@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -9,6 +8,7 @@ import PixelToolPicker from '../PixelEditor/PixelToolPicker/PixelToolPicker';
 import TilePixelEditor from './TilePixelEditor/TilePixelEditor';
 import PalettePicker from '../PalettePicker/PalettePicker';
 import TileStatusBar from './TileStatusBar/TileStatusBar';
+import Gifelo from '../Gifelo/Gifelo';
 
 import { toggleTileEditorPanels, toggleTileEditorTileSelector } from '../../state/Layout/tileEditor';
 
@@ -52,8 +52,16 @@ class TileEditor extends React.Component {
   render() {
     return (
       <div className="tile-editor">
-        <PixelToolSettings />
-        <PixelToolPicker />
+
+        <div style={ { display: 'flex', flexDirection: 'row', width: '100%', 
+          justifyContent: 'space-between' } }>
+          <div style={ { display: 'flex', flexDirection: 'column', width:'100%', alignItems:'center' } }>
+            <PixelToolSettings />
+            <PixelToolPicker />
+          </div>
+          <Gifelo />
+        </div>
+
         <div className="editor-section">
           <TilePixelEditor />
           <PalettePicker />

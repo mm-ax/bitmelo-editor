@@ -1,0 +1,15 @@
+@import '../../style//colors.scss';
+.gifeloButton:hover {
+    background-color:$primary-light-color !important;
+    transition: all 0.25s;
+}
+.gifeloButton {
+  display: flex;
+  background-color : $primary-color;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: bold;
+  border : none;
+  cursor: pointer;
+  outline: inherit;
+}
